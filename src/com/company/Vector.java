@@ -8,9 +8,6 @@ public class Vector {
         this.arr = arr;
     }
 
-    public double[] getValue(){
-        return arr;
-    }
     //return array`s element
     public double getValue(int number){
         return arr[number-1];

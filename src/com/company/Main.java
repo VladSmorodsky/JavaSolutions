@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -14,14 +15,15 @@ public class Main {
             double i = scanner.nextDouble();
             arrayList[index] = i;
         }
+
         Vector v = new Vector(arrayList);
 
-        double val = v.getValue(1); //get value one element
+        double val = v.getValue(1); //get value one element from array
         System.out.println("val:" + val);
 
-        v.setValue(2,56);
+        v.setValue(2,56); //set value one element from array
         System.out.println(v.getValue(2));
 
+        System.out.println("ArrayList:"+ Arrays.toString(arrayList)); //get all array`s elements
     }
-
 }
