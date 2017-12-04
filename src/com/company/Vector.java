@@ -13,6 +13,13 @@ public class Vector {
         return arr[number-1];
     }
 
+    //watch all Vector`s elements
+    public void getValue(){
+        for (double item:this.arr){
+            System.out.println("Items:"+item);
+        }
+    }
+
     // Change array`s element
     public double setValue(int number, double val){
         arr[number-1] = val;

@@ -22,6 +22,9 @@ public class Main {
         //get value one element from array
         System.out.println("val:" + v.getValue(3));
 
+        //watch all Vector`s elements
+        v.getValue();
+
         //set value one element from array
         v.setValue(3,56);
         System.out.println(v.getValue(3));
