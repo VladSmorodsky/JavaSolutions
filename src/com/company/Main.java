@@ -17,6 +17,8 @@ public class Main {
             arrayList[index] = i;
         }
         double[] arL = {10.0,20.0,30.0,40.0,50.0};
+        double[] arL2 = {100.0,2.0,30.0,400.0,500.0};
+
         Vector v = new Vector(arrayList);
 
         //get value one element from array
@@ -29,9 +31,12 @@ public class Main {
         v.setValue(3,56);
         System.out.println(v.getValue(3));
 
-        //get all array`s elements
+        //filling Vector from array
         v.setFillVector(arL);
         System.out.println(v.getValue(3));
 
+        //Comparing Vectors
+        Vector secondVector = new Vector(arL2);
+        secondVector.compareWith(v);
     }
 }

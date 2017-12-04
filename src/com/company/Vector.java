@@ -36,7 +36,19 @@ public class Vector {
         return this.arr;
     }
 
-    //get Vector`s values
+    //Comparing Vectors
+    public void compareWith(Vector vector){
+        for (int index = 0; index < this.arr.length; index++){
+            if (this.arr[index] > vector.getValue(index+1)){
+                System.out.println("The "+this.arr[index]+"element from first vector is bigger then "+vector.getValue(index+1)+" from second vector");
+            }
 
-
+            else if (this.arr[index] < vector.getValue(index+1)){
+                System.out.println("The "+this.arr[index]+"element from first vector is smaller then "+vector.getValue(index+1)+" from second vector");
+            }
+            else{
+                System.out.println("The "+this.arr[index]+"element from first vector is equal with "+vector.getValue(index+1)+" from second vector");
+            }
+        }
+    }
 }
