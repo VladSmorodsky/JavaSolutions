@@ -14,41 +14,49 @@ public class Vector {
     }
 
     //watch all Vector`s elements
-    public void getValue(){
+    public void showValue(){
         for (double item:this.arr){
             System.out.println("Items:"+item);
         }
     }
 
     // Change array`s element
-    public double setValue(int number, double val){
+    public void setValue(int number, double val){
         arr[number-1] = val;
-        return arr[number-1];
     }
 
     // Fill Vector with pointing array`s items
-    public double[] setFillVector(double[] arr){
+    public void setFillVector(double[] arr){
         int index = 0;
-        for (double item:arr){
-            this.arr[index] = item;
-            index++;
+        if (arr.length == this.arr.length){
+            for (double item:arr){
+                this.arr[index] = item;
+                index++;
+            }
         }
-        return this.arr;
+        else {
+            System.out.println("Array`s length is deny.");
+        }
     }
 
     //Comparing Vectors
-    public void compareWith(Vector vector){
-        for (int index = 0; index < this.arr.length; index++){
-            if (this.arr[index] > vector.getValue(index+1)){
-                System.out.println("The "+this.arr[index]+"element from first vector is bigger then "+vector.getValue(index+1)+" from second vector");
+    public boolean compareWith(Vector vector){
+        if (this.arr.length == vector.getCountElementsInVector()){
+            for (int index = 0; index < this.arr.length; index++){
+                if (this.arr[index] != vector.getValue(index+1)){
+                    return false;
+                }
             }
-
-            else if (this.arr[index] < vector.getValue(index+1)){
-                System.out.println("The "+this.arr[index]+"element from first vector is smaller then "+vector.getValue(index+1)+" from second vector");
-            }
-            else{
-                System.out.println("The "+this.arr[index]+"element from first vector is equal with "+vector.getValue(index+1)+" from second vector");
-            }
+            return true;
         }
+        else
+            {
+                return false;
+            }
+    }
+
+    //Get Vectors length
+    public int getCountElementsInVector(){
+        return this.arr.length;
     }
 }

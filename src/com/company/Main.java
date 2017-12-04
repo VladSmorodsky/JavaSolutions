@@ -10,33 +10,38 @@ public class Main {
 	// write your code here
 
         double[] arrayList = new double[5];
+
         //array filling
         Scanner scanner = new Scanner(System.in);
         for (int index = 0; index < arrayList.length; index++){
             double i = scanner.nextDouble();
             arrayList[index] = i;
         }
+
         double[] arL = {10.0,20.0,30.0,40.0,50.0};
         double[] arL2 = {100.0,2.0,30.0,400.0,500.0};
 
-        Vector v = new Vector(arrayList);
+        Vector v = new Vector(arrayList.clone());
 
-        //get value one element from array
+        //Get value one element from array
         System.out.println("val:" + v.getValue(3));
 
-        //watch all Vector`s elements
-        v.getValue();
+        //Watch all Vector`s elements
+        v.showValue();
 
-        //set value one element from array
+        //Set value one element from array
         v.setValue(3,56);
         System.out.println(v.getValue(3));
 
-        //filling Vector from array
+        //Filling Vector from array
         v.setFillVector(arL);
         System.out.println(v.getValue(3));
 
         //Comparing Vectors
-        Vector secondVector = new Vector(arL2);
-        secondVector.compareWith(v);
+        Vector secondVector = new Vector(arrayList);
+        System.out.println("Are vectors equal? "+"\n-"+secondVector.compareWith(v));
+
+        //Counting elements on Vector
+        System.out.println("The length of vector: "+secondVector.getCountElementsInVector());
     }
 }
