@@ -10,20 +10,25 @@ public class Main {
 	// write your code here
 
         double[] arrayList = new double[5];
+        //array filling
         Scanner scanner = new Scanner(System.in);
         for (int index = 0; index < arrayList.length; index++){
             double i = scanner.nextDouble();
             arrayList[index] = i;
         }
-
+        double[] arL = {10.0,20.0,30.0,40.0,50.0};
         Vector v = new Vector(arrayList);
 
-        double val = v.getValue(1); //get value one element from array
-        System.out.println("val:" + val);
+        //get value one element from array
+        System.out.println("val:" + v.getValue(3));
 
-        v.setValue(2,56); //set value one element from array
-        System.out.println(v.getValue(2));
+        //set value one element from array
+        v.setValue(3,56);
+        System.out.println(v.getValue(3));
 
-        System.out.println("ArrayList:"+ Arrays.toString(arrayList)); //get all array`s elements
+        //get all array`s elements
+        v.setFillVector(arL);
+        System.out.println(v.getValue(3));
+
     }
 }
