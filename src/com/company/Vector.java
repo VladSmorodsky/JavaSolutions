@@ -59,4 +59,42 @@ public class Vector {
     public int getCountElementsInVector(){
         return this.arr.length;
     }
+
+    //Get Min Value from Vector
+    public double getMinValue(){
+        double min = this.arr[0];
+        for(int index = 1; index < this.arr.length; index++){
+            if (this.arr[index] < min){
+                min = this.arr[index];
+            }
+        }
+        return min;
+    }
+
+    //Get Max Value from Vector
+    public double getMaxValue(){
+        double max = this.arr[0];
+        for(int index = 1; index < this.arr.length; index++){
+            if (this.arr[index] > max){
+                max = this.arr[index];
+            }
+        }
+        return max;
+    }
+
+    //Multiplying Vector`s with number
+    public void multipleToNumber(double number){
+        for (int index=0; index < this.arr.length; index++){
+            this.arr[index] *= number;
+        }
+    }
+
+    //Sum with Vector
+    public void sumVectors(Vector vector){
+        if (this.arr.length == vector.getCountElementsInVector()){
+            for (int index=0; index < this.arr.length; index++){
+                this.arr[index] += vector.getValue(index+1);
+            }
+        }
+    }
 }

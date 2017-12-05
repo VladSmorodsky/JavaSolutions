@@ -18,7 +18,7 @@ public class Main {
             arrayList[index] = i;
         }
 
-        double[] arL = {10.0,20.0,30.0,40.0,50.0};
+        double[] arL = {20.0,10.0,30.0,4.0,50.0};
         double[] arL2 = {100.0,2.0,30.0,400.0,500.0};
 
         Vector v = new Vector(arrayList.clone());
@@ -43,5 +43,19 @@ public class Main {
 
         //Counting elements on Vector
         System.out.println("The length of vector: "+secondVector.getCountElementsInVector());
+
+        //Get min Vector`s element
+        System.out.println(v.getMinValue());
+
+        //Get max Vector`s element
+        System.out.println(v.getMaxValue());
+
+        //Multiplying Vector to Number
+        v.multipleToNumber(5);
+        v.showValue();
+
+        //Sum with another Vector`s values
+        v.sumVectors(secondVector);
+        v.showValue();
     }
 }
