@@ -55,5 +55,11 @@ public class Main {
         //Sum with another Vector`s values
         v.sumVectors(secondVector);
         v.showValue();
+
+        //Sort to low Vector
+        Sort.sortToLow(v);
+
+        //Sort to large Vector
+        Sort.sortToLarge(v);
     }
 }
